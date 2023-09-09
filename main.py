@@ -10,10 +10,10 @@ search_box.send_keys("Guitarra Clasica")
 search_button = driver.find_element(by=By.CSS_SELECTOR, value="#search_widget > form > button")
 search_button.click()
 
-guitarras = driver.find_elements(By.CSS_SELECTOR, "#js-product-list > div.products.row > div")
+Guitarras = driver.find_elements(By.CSS_SELECTOR, "#js-product-list > div.products.row > div")
 
 
-for card in guitarras:
+for card in Guitarras:
     try:
         Nombre_del_producto = card.find_element(By.CSS_SELECTOR, "div > div.product-description > h2").text
         Precio = card.find_element(By.CSS_SELECTOR, "div > div.product-description > div > span.price").text
@@ -22,7 +22,7 @@ for card in guitarras:
         print(Precio)
         print(Estado)
 
-        coche_actual = {
+        Productos = {
             "Nombre_del_producto": Nombre_del_producto,
             "Precio": Precio,
             "Estado": Estado
