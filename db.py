@@ -20,7 +20,7 @@ class MongoDriver:
         # Send a ping to confirm a successful connection
 
     def insert_record(self, record: dict, username: str):
-        self.client.get_database('db_UIDE').get_collection(f'{username}_guitarras').insert_one(record)
+        self.client.get_database('db_UIDE').get_collection(f'{username}_Guitarras').insert_one(record)
 
 
     def test_connection(self):
