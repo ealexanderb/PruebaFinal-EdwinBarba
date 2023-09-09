@@ -30,7 +30,7 @@ for card in Guitarras:
             "Estado": Estado
         }
 
-        mongodb.insert_record(record=Productos, username="Fender")
+        mongodb.insert_record(record=Productos, username="Listado")
 
         print("________________________________________________________")
     except Exception as e:
