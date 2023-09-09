@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from db import MongoDriver
 
 
+
 driver = webdriver.Chrome()
 driver.get("https://sonikaecuador.com/")
 search_box = driver.find_element(by=By.CSS_SELECTOR, value="#search_widget > form > input.ui-autocomplete-input")
@@ -27,7 +28,7 @@ for card in Guitarras:
         Productos = {
             "Nombre_del_producto": Nombre_del_producto,
             "Precio": Precio,
-            "Estado": Estado
+            "Estado": Estado,
         }
 
         mongodb.insert_record(record=Productos, username="EBarba")
