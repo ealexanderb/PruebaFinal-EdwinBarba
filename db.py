@@ -34,16 +34,15 @@ class MongoDriver:
 if __name__ == "__main__":
     mi_base_de_datos = MongoDriver()
     mi_base_de_datos.insert_record(record={
-        "Nombre": "Yahama",
+        "Marca": "Cordoba",
         "Detalles": {
-            "Matricula":"654AAA",
+            "Serie":"C5CE",
             "Fechayhora": datetime.now(),
             "Incidencias":[
-                "problema con las cuerdas",
-                "problema con las clavijas",
+                "Pequeño raspón en el mango",
                 "Falta una cuerda"
             ]
         },
-        "Precio": 1000,
-        "Kms": 20}, username="Edwin_Variables")
+        "Precio": 502,
+        "Estilo": "Clásica"}, username="Edwin")
 
