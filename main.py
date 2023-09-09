@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from db import MongoDriver
 
 
 driver = webdriver.Chrome()
@@ -12,6 +13,7 @@ search_button.click()
 
 Guitarras = driver.find_elements(By.CSS_SELECTOR, "#js-product-list > div.products.row > div")
 
+mongodb = MongoDriver()
 
 for card in Guitarras:
     try:
@@ -27,6 +29,8 @@ for card in Guitarras:
             "Precio": Precio,
             "Estado": Estado
         }
+
+        mongodb.insert_record(record=Productos, username="Fender")
 
         print("________________________________________________________")
     except Exception as e:
